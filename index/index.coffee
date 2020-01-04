@@ -1,13 +1,14 @@
-import Modules from "./modules"
+import Modules from "./allmodules"
 
 global.allModules = Modules
 
 
-window.onload = ->    
-    promises = (m.initialize() for m of Modules)
+window.onload = ->
+    promises = (m.initialize() for n,m of Modules)
     await Promise.all(promises)
-    Modules.startupmodule.appStartup()
-    
+    appStartup()
 
 
-
+appStartup = ->
+    ## which modules shall be kickstarted?
+    return

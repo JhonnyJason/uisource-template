@@ -7,8 +7,6 @@ debugmodule.initialize = () ->
 
 debugmodule.modulesToDebug = 
     unbreaker: true
-    # configmodule: true
-    # homepagemodule: true
-    # startupmodule: true
+    configmodule: true
 
 export default debugmodule
